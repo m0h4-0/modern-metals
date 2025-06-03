@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modern metals</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="imgs/icon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-a">
+            <img style="width: 55px; border-radius: 50px;" src="imgs/header-photo.png">
+            <h1 style="font-family: font2; font-size: 14px; color: #5a5a5a; margin: 0 10px;">دکوراسیون فلزی و چوبی کرمان</h1>
+        </div>
+        <div class="header-b">
+            <button style="margin: 0 10px; background: none; border: none;" onclick="toggleMenu()">
+                <img style="width: 26px;" src="imgs/hamburger-menu.png">
+            </button>
+        </div>
+    </header>
+    <div class="menu" id="menu">
+        <div class="menu-components">
+            <div style="padding: 0 25px; direction: rtl; position: absolute; top: 15px;">
+                <button style="background: none;border: none;font-size: 40px;color: #c7c7c7; padding: 0;" onclick="hideMenu()">&times;</button>
+            </div>
+            <div style="padding: 0 25px; direction: rtl; display: grid; gap: 24px;">
+                <div class="menu-components-c">
+                    <a style="font-size: 18px; font-family: font2; color: #4a4a4a; display: flex; gap: 10px;"><i class="fas fa-home"></i> صفحه اصلی</a>
+                </div>
+                <div class="menu-components-c">
+                    <a style="font-size: 18px; font-family: font2; color: #4a4a4a; display: flex; gap: 10px;"><i class="fas fa-store"></i> فروشگاه</a>
+                </div>
+                <div class="menu-components-c">
+                    <a style="font-size: 18px; font-family: font2; color: #4a4a4a; display: flex; gap: 10px;"><i class="fas fa-cube"></i> نمونه کار</a>
+                </div>
+                <div class="menu-components-c">
+                    <a style="font-size: 18px; font-family: font2; color: #4a4a4a; display: flex; gap: 10px;"><i class="fas fa-blog"></i> وبلاگ</a>
+                </div>
+                <!--div class="menu-components-c">
+                    <a style="font-size: 18px; font-family: font2; color: #4a4a4a;  display: flex; gap: 10px;"><i class="fas fa-info-circle"></i> درباره ما</a>
+                </div-->
+                <div class="menu-components-c">
+                    <a style="font-size: 18px; font-family: font2; color: #4a4a4a;  display: flex; gap: 10px;"><i class="fas fa-phone"></i> تماس با ما</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="caption">
+        <img style="margin: 0 0 8px 0; width: 300px; height: 40px;" src="imgs/modern metals.png">
+        <p style="font-family: font3; direction: rtl; margin: 0;">خونت رو با ما خوشگل کن !</p>
+    </div>
+    <div class="products">
+        <div class="products-p"><a class="products-p-a"><img class="products-p-img" src="https://raw.githubusercontent.com/m0h4-0/store/main/static/imgs/tools/106.jpg">میز و صندلی</a></div>
+        <div class="products-p"><a class="products-p-a"><img class="products-p-img" src="https://raw.githubusercontent.com/m0h4-0/store/main/static/imgs/nemoone2.jpeg">کنسول</a></div>
+        <div class="products-p"><a class="products-p-a"><img class="products-p-img" src="https://raw.githubusercontent.com/m0h4-0/store/main/static/imgs/tools/612.jpg">استند گل</a></div>
+        <div class="products-p"><a class="products-p-a"><img class="products-p-img" src="https://raw.githubusercontent.com/m0h4-0/store/main/static/imgs/tools/901.jpg">اباژور</a></div>
+        <div class="products-p"><a class="products-p-a"><img class="products-p-img" src="https://raw.githubusercontent.com/m0h4-0/store/main/static/imgs/tools/901.jpg">اباژور</a></div>
+    </div>
+    <div class="new-products">
+        <div style="direction: rtl; display: flex; align-items: center; font-size: 19px; font-family: font2; color: #6e6e6e;">
+            <i class="fas fa-cube" style="font-size: 28px; margin-left: 10px; color: #5e5e5e;"></i>محصولات جدید
+        </div>
+    </div>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("menu");
+            if (menu.style.display === "none" || menu.style.display === "") {
+                menu.style.display = "block"
+            } else {
+                menu.style.display = "none"
+            }
+        }
+        function hideMenu() {
+            document.getElementById("menu").style.display = "none"
+        }
+        document.getElementById("menu").addEventListener("click", function(event) {
+            if (event.target === event.currentTarget) {
+                document.getElementById("menu").style.display = "none"
+            }
+        });
+    </script>
+</body>
+</html>
