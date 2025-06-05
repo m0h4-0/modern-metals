@@ -19,6 +19,10 @@ body {
     margin: 0;
 }
 
+a {
+    text-decoration: none;
+}
+
 header {
     direction: rtl;
     height: 90px;
@@ -118,6 +122,122 @@ header {
     width: 75px; height: 75px; border-radius: 50px;
 }
 
-.new-products {
-    margin: 20px 10px 10px 10px;
+.new-products, .making-products, .questions {
+    margin: 20px 15px 10px 15px;
+}
+
+.new-products-imgs {
+    padding: 15px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+}
+
+.new-products-imgs-div {
+    display: flex;
+    direction: rtl;
+    flex-direction: column;
+}
+
+.making-products-div {
+    background: #f9f9f9;
+    border: 1px solid #c3c3c3;
+    margin: 15px 0;
+    padding: 20px 0 14px 0;
+    border-radius: 15px;
+    box-shadow: 0 0 8px 0px #dddddd;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.making-products-div-p {
+    background: #d10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 35px;
+    color: white;
+    font-family: font2;
+    font-size: 12px;
+    border-radius: 6px;
+    margin-top: 25px;
+    text-decoration: none;
+}
+
+.questions-div {
+    margin: 15px 0;
+}
+
+.questions-div-div {
+    padding: 0 0 10px;
+    border-bottom: 1px solid #d70000;
+    margin: 0 0 -10px;
+}
+
+.questions-div-div-q {
+    width: 90%; 
+    font-size: 13px; 
+    display: flex; 
+    align-items: center;
+}
+
+.questions-div-div-i {
+    width: 10%; 
+    direction: ltr; 
+    font-size: 30px; 
+    font-family: font4; 
+    color: rgb(214, 0, 0);
+}
+
+.questions-div-div-a {
+    direction: rtl; 
+    font-family: 'font4'; 
+    font-size: 13px; 
+    margin: 0 0 10px; 
+    display: none;
+}
+
+footer {
+    background: #29343c;
+    direction: rtl;
+    display: flex;
+    align-items: center;
+    padding: 25px 30px 20px;
+    margin: 50px 0 0 0;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.footer-info, .fast-access {
+    direction: rtl;
+    display: flex;
+    align-items: start;
+    width: 100%;
+    flex-direction: column;
+}
+
+.footer-info-div {
+    direction: rtl; 
+    display: flex; 
+    flex-direction: row; 
+    color: rgb(169, 169, 169); 
+    width: 100%; 
+    font-family: font2;
+    font-size: 15px;
+    height: 22px;
+}
+
+
+/*-----------------------------store-------------------------------*/
+.comments {
+    display: flex;
+    align-items: start;
+    margin: 25px 0 0;
+    background: rgb(255, 255, 255);
+    padding: 15px 10px;
+    gap: 10px;
+    flex-direction: column;
+    direction: rtl;
 }
