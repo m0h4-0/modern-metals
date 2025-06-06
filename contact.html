@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modern metals</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="imgs/icon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-a">
+            <img style="width: 55px; border-radius: 50px;" src="imgs/header-photo.png">
+            <h1 style="font-family: font2; font-size: 14px; color: #5a5a5a; margin: 0 10px;">دکوراسیون فلزی و چوبی کرمان</h1>
+        </div>
+        <div class="header-b">
+            <button style="margin: 0 10px; background: none; border: none;" onclick="toggleMenu()">
+                <img style="width: 26px;" src="imgs/hamburger-menu.png">
+            </button>
+        </div>
+    </header>
+    <div class="menu" id="menu">
+        <div class="menu-components">
+            <div style="padding: 0 25px; direction: rtl; position: absolute; top: 15px;">
+                <button style="background: none;border: none;font-size: 40px;color: #c7c7c7; padding: 0;" onclick="hideMenu()">&times;</button>
+            </div>
+            <div style="padding: 0 25px; direction: rtl; display: grid; gap: 24px;">
+                <div class="menu-components-c">
+                    <a href="index.html" style="font-size: 18px; font-family: font2; color: #4a4a4a; display: flex; gap: 10px;"><i class="fas fa-home"></i> صفحه اصلی</a>
+                </div>
+                <div class="menu-components-c">
+                    <a href="store.html" style="font-size: 18px; font-family: font2; color: #4a4a4a; display: flex; gap: 10px;"><i class="fas fa-store"></i> فروشگاه</a>
+                </div>
+                <div class="menu-components-c">
+                    <a style="font-size: 18px; font-family: font2; color: #4a4a4a; display: flex; gap: 10px;"><i class="fas fa-cube"></i> نمونه کار</a>
+                </div>
+                <div class="menu-components-c">
+                    <a href="blog.html" style="font-size: 18px; font-family: font2; color: #4a4a4a; display: flex; gap: 10px;"><i class="fas fa-blog"></i> وبلاگ</a>
+                </div>
+                <!--div class="menu-components-c">
+                    <a style="font-size: 18px; font-family: font2; color: #4a4a4a;  display: flex; gap: 10px;"><i class="fas fa-info-circle"></i> درباره ما</a>
+                </div-->
+                <div class="menu-components-c">
+                    <a href="contact.html" style="font-size: 18px; font-family: font2; color: #4a4a4a;  display: flex; gap: 10px;"><i class="fas fa-phone"></i> تماس با ما</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="margin: 20px 10px; direction: rtl; font-family: 'font3'; font-size: 14px;">
+        صفحه اصلی / <span style="font-family: font2;">تماس با ما</span>
+    </div>
+    <div class="contact-to">
+        <div class="contact-to-div">
+            <h1 style="margin: 0; font-family: 'font2'; font-size: 18px; width: 100%;">تماس با ما</h1>
+            <span style="margin: 0; font-family: 'font4'; font-size: 14px; width: 100%;">با شما در ارتباط هستیم</span>
+            <div style="display: flex; flex-direction: row; margin: 25px 0 0;">
+                <a class="store-ertebat-a" style="border-radius: 0 15px 15px 0; width: 150px; height: 40px; font-size: 12px; margin: 2px;" href="tel:09051795672">تماس با پشتیبانی</a>
+                <a class="store-ertebat-a" style="border-radius: 15px 0 0 15px; width: 150px; height: 40px; font-size: 12px; margin: 2px;" href="sms:09051795672">ارسال پیامک به پشتیبانی</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="fast-access">
+            <h1 style="color: #e9e9e9; font-family: font2; font-size: 15px; margin: 0 0 14px 0;">دسترسی سریع</h1>
+            <div style="width: 100%; display: flex; gap: 3px; flex-direction: column;">
+                <a href="index.html" class="footer-info-div" style="width: 100%; direction: rtl; display: flex; align-items: center; gap: 7px;"><i class="fas fa-home"></i> صفحه اصلی</a>
+                <a href="store.html" class="footer-info-div" style="width: 100%; direction: rtl; display: flex; align-items: center; gap: 7px;"><i class="fas fa-store"></i> فروشگاه</a>
+                <a href="" class="footer-info-div" style="width: 100%; direction: rtl; display: flex; align-items: center; gap: 7px;"><i class="fas fa-cube"></i> نمونه کار</a>
+                <a href="blog.html" class="footer-info-div" style="width: 100%; direction: rtl; display: flex; align-items: center; gap: 7px;"><i class="fas fa-blog"></i> وبلاگ</a>
+                <a href="contact.html" class="footer-info-div" style="width: 100%; direction: rtl; display: flex; align-items: center; gap: 7px;"><i class="fas fa-phone"></i> تماس با ما</a>
+            </div>
+        </div>
+        <div class="footer-info">
+            <h1 style="color: #e9e9e9; font-family: font2; font-size: 15px; margin: 0 0 14px 0;">راه های ارتباطی</h1>
+            <div style="width: 100%; display: flex; gap: 3px; flex-direction: column;">
+                <div class="footer-info-div">
+                    <div style="width: 50%; direction: rtl; display: flex; align-items: center;">شماره تماس</div>
+                    <div style="width: 50%; direction: ltr; display: flex; align-items: center; font-family: font1;">09051795672</div>
+                </div>
+                <div class="footer-info-div">
+                    <div style="width: 50%; direction: rtl; display: flex; align-items: center;">روبیکا</div>
+                    <div style="width: 50%; direction: ltr; display: flex; align-items: center;"><a style="color: rgb(0, 81, 255);" href="https://rubika.ir/modern_metals">https://rubika.ir/modern_metals</a></div>
+                </div>
+                <div class="footer-info-div">
+                    <div style="width: 50%; direction: rtl; display: flex; align-items: center;">اینستاگرام</div>
+                    <div style="width: 50%; direction: ltr; display: flex; align-items: center;"><a style="color: rgb(0, 81, 255);" href="https://www.instagram.com/modern_metals1?igsh=MXR1cHM1c2N4YWg1Mw==">@modern_metals1</a></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("menu");
+            if (menu.style.display === "none" || menu.style.display === "") {
+                menu.style.display = "block"
+            } else {
+                menu.style.display = "none"
+            }
+        }
+        function hideMenu() {
+            document.getElementById("menu").style.display = "none"
+        }
+        document.getElementById("menu").addEventListener("click", function(event) {
+            if (event.target === event.currentTarget) {
+                document.getElementById("menu").style.display = "none"
+            }
+        });
+    </script>
+</body>
+</html>
