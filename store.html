@@ -21,6 +21,33 @@
             </button>
         </div>
     </header>
+    <div class="menu" id="menu">
+        <div class="menu-components">
+            <div style="padding: 0 25px; direction: rtl; position: absolute; top: 15px;">
+                <button style="background: none;border: none;font-size: 40px;color: #c7c7c7; padding: 0;" onclick="hideMenu()">&times;</button>
+            </div>
+            <div style="padding: 0 25px; direction: rtl; display: grid; gap: 24px;">
+                <div class="menu-components-c">
+                    <a href="index.html" style="font-size: 18px; font-family: font2; color: #4a4a4a; display: flex; gap: 10px;"><i class="fas fa-home"></i> صفحه اصلی</a>
+                </div>
+                <div class="menu-components-c">
+                    <a href="store.html" style="font-size: 18px; font-family: font2; color: #4a4a4a; display: flex; gap: 10px;"><i class="fas fa-store"></i> فروشگاه</a>
+                </div>
+                <div class="menu-components-c">
+                    <a style="font-size: 18px; font-family: font2; color: #4a4a4a; display: flex; gap: 10px;"><i class="fas fa-cube"></i> نمونه کار</a>
+                </div>
+                <div class="menu-components-c">
+                    <a style="font-size: 18px; font-family: font2; color: #4a4a4a; display: flex; gap: 10px;"><i class="fas fa-blog"></i> وبلاگ</a>
+                </div>
+                <!--div class="menu-components-c">
+                    <a style="font-size: 18px; font-family: font2; color: #4a4a4a;  display: flex; gap: 10px;"><i class="fas fa-info-circle"></i> درباره ما</a>
+                </div-->
+                <div class="menu-components-c">
+                    <a style="font-size: 18px; font-family: font2; color: #4a4a4a;  display: flex; gap: 10px;"><i class="fas fa-phone"></i> تماس با ما</a>
+                </div>
+            </div>
+        </div>
+    </div>
     <div style="margin: 20px 10px; direction: rtl; font-family: 'font3'; font-size: 14px;">
         صفحه اصلی / <span style="font-family: font2;">فروشگاه</span>
     </div>
@@ -33,8 +60,100 @@
     </div>
     <div class="comments">
         <h1 style="margin: 0; font-family: 'font2'; font-size: 22px;">نظرات کاربران</h1>
-        <div class="comments-c">
-            sss
+        <div class="comments-div">
+            <div class="comments-div-sendcomment">
+                <div style="display: flex; justify-content: center; font-family: font2; font-size: 18px;">ارسال دیدگاه</div>
+                <div>
+                    <textarea class="comments-div-sendcomment-text" id="commentText" placeholder="متن نظر شما"></textarea>
+                </div>
+                <div style="display: flex; flex-direction: row; justify-content: space-between;">
+                    <input class="comments-div-sendcomment-name" type="text" id="nameInput" placeholder="نام شما" />
+                    <button class="comments-div-sendcomment-btn" id="submitBtn">ارسال</button>
+                </div>
+            </div>
+            <div class="comments-div-c">
+                <div class="comments-div-c-1">
+                    <div style="width: 70%;">
+                        <h1 class="comments-div-c-1-h1">رضا علیپور</h1>
+                        <span class="comments-div-c-1-time" data-time="2025-06-06T10:06:40"></span>
+                    </div>
+                    <div style="width: 30%; display: flex; align-items: center; justify-content: end;">
+                        <button class="comments-div-c-1-button" onclick="answerComment()">پاسخ</button>
+                    </div>
+                </div>
+                <p class="comments-div-c-p">
+                    یکی از بهترین کارگاه های کرمان. میز ناهار خوری سفارش دادم کمتر از 6 روز به دستم رسید
+                </p>
+                <div class="comments-div-c-a">
+                    <div class="comments-div-c-1">
+                        <div style="width: 70%;">
+                            <h1 class="comments-div-c-1-h1">مدیر <span class="comments-div-c-1-h1-a">جواب داد:</span></h1>
+                            <span class="comments-div-c-1-time" data-time="2025-06-06T14:11:00"></span>
+                        </div>
+                        <div style="width: 30%; display: flex; align-items: center; justify-content: end;">
+                            <button class="comments-div-c-1-button" onclick="answerComment()">پاسخ</button>
+                        </div>
+                    </div>
+                    <p class="comments-div-c-p">
+                        خوشحالیم که رضایت داشتید
+                    </p>
+                </div>
+            </div>
+            <div style="background: #a1a1a1; width: 100%; height: 1px; margin: 20px 0;"></div>
+            <div class="comments-div-c">
+                <div class="comments-div-c-1">
+                    <div style="width: 70%;">
+                        <h1 class="comments-div-c-1-h1">محمد</h1>
+                        <span class="comments-div-c-1-time" data-time="2025-06-04T09:45:00"></span>
+                    </div>
+                    <div style="width: 30%; display: flex; align-items: center; justify-content: end;">
+                        <button class="comments-div-c-1-button" onclick="answerComment()">پاسخ</button>
+                    </div>
+                </div>
+                <p class="comments-div-c-p">
+                    به شهر های دیگه بجز کرمان هم ارسال میکنید ؟یزد هستم
+                </p>
+                <div class="comments-div-c-a">
+                    <div class="comments-div-c-1">
+                        <div style="width: 70%;">
+                            <h1 class="comments-div-c-1-h1">مدیر <span class="comments-div-c-1-h1-a">جواب داد:</span></h1>
+                            <span class="comments-div-c-1-time" data-time="2025-06-04T10:11:00"></span>
+                        </div>
+                        <div style="width: 30%;  display: flex; align-items: center; justify-content: end;">
+                            <button class="comments-div-c-1-button" onclick="answerComment()">پاسخ</button>
+                        </div>
+                    </div>
+                    <p class="comments-div-c-p">
+                        بله با پشتیبانی هماهنگ کنید
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="store-ertebat-btn" onclick="contactSupport()">ارتباط با پشتیبانی</button>
+    <div class="store-ertebat" id="storeErtebat">
+        <iframe style="width: 80%; height: 78%;" src="https://rubika.ir/modern_metals"></iframe>
+    </div>
+    <div class="hailaits">
+        <div class="hailaits-1">
+            <button class="hailaits-1-a" onclick="openStory(allStories.story1)"><img class="hailaits-img" src="imgs/highlight1.jpg"></button>
+            <h1 class="hailaits-1-h1">ارتباط با ما</h1>
+        </div>
+        <div class="hailaits-1">
+            <button class="hailaits-1-a" onclick="openStory(allStories.story2)"><img class="hailaits-img" src="imgs/highlight2.jpeg"></button>
+            <h1 class="hailaits-1-h1">نحوه ثبت سفارش</h1>
+        </div>
+        <div class="hailaits-1">
+            <button class="hailaits-1-a" onclick="openStory(allStories.story3)"><img class="hailaits-img" src="imgs/highlight3.jpg"></button>
+            <h1 class="hailaits-1-h1">کارگاه</h1>
+        </div>
+        <div class="hailaits-1">
+            <button class="hailaits-1-a" onclick="openStory(allStories.story4)"><img class="hailaits-img" src="imgs/highlight4.jpg"></button>
+            <h1 class="hailaits-1-h1">واریزی ها</h1>
+        </div>
+        <div class="hailaits-1">
+            <button class="hailaits-1-a" onclick="openStory(allStories.story5)"><img class="hailaits-img" src="imgs/highlight5.jpg"></button>
+            <h1 class="hailaits-1-h1">رضایت های شما</h1>
         </div>
     </div>
     <footer>
@@ -66,5 +185,170 @@
             </div>
         </div>
     </footer>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("menu");
+            if (menu.style.display === "none" || menu.style.display === "") {
+                menu.style.display = "block"
+            } else {
+                menu.style.display = "none"
+            }
+        }
+        function hideMenu() {
+            document.getElementById("menu").style.display = "none"
+        }
+        document.getElementById("menu").addEventListener("click", function(event) {
+            if (event.target === event.currentTarget) {
+                document.getElementById("menu").style.display = "none"
+            }
+        });
+        
+        function getRelativeTime(pastDate) {
+            const now = new Date();
+            const diff = now - pastDate;
+            const seconds = Math.floor(diff / 1000);
+            const minutes = Math.floor(diff / (1000 * 60));
+            const hours = Math.floor(diff / (1000 * 60 * 60));
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const weeks = Math.floor(days / 7)
+            const months = Math.floor(days / 30)
+
+            if (seconds < 60) {
+                return `${seconds} ثانیه پیش`;
+            } else if (minutes < 60) {
+                return `${minutes} دقیقه پیش`;
+            } else if (hours < 24) {
+                return `${hours} ساعت پیش`;
+            } else if (days < 7) {
+                return `${days} روز پیش`;
+            } else if (days < 30) {
+                const remainingDays = days % 7;
+                let result = `${weeks} هفته`;
+                if (remainingDays > 0) {
+                    result += ` و ${remainingDays} روز`;
+                }
+                return result + ' پیش';
+            } else {
+                const remainingDays = days % 30;
+                const remainingWeeks = Math.floor(remainingDays / 7);
+                const remainingDaysLeft = remainingDays % 7;
+                let result = `${months} ماه`;
+
+                if (remainingWeeks > 0) {
+                    result += ` و ${remainingWeeks} هفته`;
+                }
+                if (remainingDaysLeft > 0) {
+                    result += ` و ${remainingDaysLeft} روز`;
+                }
+              
+                return result + ' پیش';
+            }
+        }
+          
+        document.querySelectorAll('.comments-div-c-1-time').forEach(el => {
+            const timeStr = el.getAttribute('data-time');
+            const pastDate = new Date(timeStr);
+            el.innerText = getRelativeTime(pastDate);
+        });
+        function answerComment() {
+            confirm('در حال حاضر امکان ثبت پاسخ فقط برای مدیر فعال است .');
+        }
+
+        document.getElementById('submitBtn').addEventListener('click', () => {
+            const name = document.getElementById('nameInput').value.trim();
+            const comment = document.getElementById('commentText').value.trim();
+
+            if (!name || !comment) {
+                alert('نام و نظر نمی‌توانند خالی باشند!');
+                return;
+            }
+      
+            alert('کامنت شما بعد از تایید مدیر به نمایش در می‌آید.');
+      
+            document.getElementById('nameInput').value = '';
+            document.getElementById('commentText').value = '';
+        });
+
+        function contactSupport() {
+            document.getElementById("storeErtebat").style.display = "flex";
+        }
+        document.getElementById("storeErtebat").addEventListener("click", function() {
+            this.style.display = "none";
+        })
+
+        const allStories = {
+            story1: [
+                { name: "ارتباط با ما", image: "imgs/highlight11.jpeg" }
+            ],
+            story2: [
+                { name: "نحوه ثبت سفارش", image: "imgs/highlight21.jpeg" }
+            ],
+            story3: [
+                { name: "کارگاه", image: "imgs/highlight31.jpeg" },
+                { name: "کارگاه", image: "imgs/highlight32.jpeg" },
+                { name: "کارگاه", image: "imgs/highlight33.jpeg" },
+                { name: "کارگاه", image: "imgs/highlight34.jpeg" },
+                { name: "کارگاه", image: "imgs/highlight35.jpeg" },
+                { name: "کارگاه", image: "imgs/highlight36.jpeg" },
+                { name: "کارگاه", image: "imgs/highlight37.jpeg" },
+                { name: "کارگاه", image: "imgs/highlight38.jpeg" }
+            ],
+            story4: [
+                { name: "واریزی ها", image: "imgs/highlight41.jpeg" },
+                { name: "واریزی ها", image: "imgs/highlight42.jpeg" },
+                { name: "واریزی ها", image: "imgs/highlight43.jpeg" },
+                { name: "واریزی ها", image: "imgs/highlight44.jpeg" },
+                { name: "واریزی ها", image: "imgs/highlight45.jpeg" }
+            ],
+            story5: [
+                { name: "رضایت های شما", image: "imgs/highlight51.jpeg" },
+                { name: "رضایت های شما", image: "imgs/highlight52.jpeg" },
+                { name: "رضایت های شما", image: "imgs/highlight53.jpeg" },
+                { name: "رضایت های شما", image: "imgs/highlight54.jpeg" },
+                { name: "رضایت های شما", image: "imgs/highlight55.jpeg" },
+                { name: "رضایت های شما", image: "imgs/highlight56.jpeg" },
+                { name: "رضایت های شما", image: "imgs/highlight57.jpeg" },
+                { name: "رضایت های شما", image: "imgs/highlight58.jpeg" }
+            ]
+        };
+        let current = 0;
+        
+        function openStory(storyList) {
+            stories = storyList;
+            current = 0;
+            document.getElementById("storyContainer").style.display = "block";
+            renderStory();
+        }
+        function renderStory() {
+            document.getElementById("storyImage").src = stories[current].image;
+            document.getElementById("storyName").innerText = stories[current].name;
+        
+            const strip = document.getElementById("storyStrip");
+            strip.innerHTML = "";
+            stories.forEach((_, index) => {
+                const div = document.createElement("div");
+                if (index === current) div.classList.add("active");
+                strip.appendChild(div);
+            });
+        }
+        function nextStory() {
+            if (current <stories.length - 1) {
+                current++;
+                renderStory();
+            } else {
+                closeStory();
+            }
+        }
+        function prevStory() {
+            if (current > 0) {
+                current--;
+                renderStory();
+            }
+        }
+        function closeStory() {
+            document.getElementById("storyContainer").style.display = "none";
+            current = 0;
+        }
+    </script>
 </body>
 </html>
