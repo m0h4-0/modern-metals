@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style/style.css">
     <link rel="shortcut icon" type="image/x-icon" href="imgs/icon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://raw.githubusercontent.com/m0h4-0/store/main/static/style/style.css">
 </head>
 <body>
     <header>
@@ -49,22 +50,34 @@
         </div>
     </div>
     <div style="margin: 20px 10px; direction: rtl; font-family: 'font3'; font-size: 14px;">
-        صفحه اصلی / <span style="font-family: font2;">تماس با ما</span>
+        صفحه اصلی / <span style="font-family: font2;">نمونه کار ها</span>
     </div>
-    <div class="contact-to">
-        <div class="contact-to-div">
-            <h1 style="margin: 0; font-family: 'font2'; font-size: 18px; width: 100%;">تماس با ما</h1>
-            <span style="margin: 0; font-family: 'font4'; font-size: 14px; width: 100%;">با شما در ارتباط هستیم</span>
-            <div style="width: 100%; margin: 20px 0 0; display: flex; gap: 2px; flex-direction: column;">
-                <div style="font-family: 'font2';  font-size: 16px;">تلفن : <span style="font-family: font4; color: #565656; font-size: 15px;">09051795672</span></div>
-                <div style="font-family: 'font2';  font-size: 16px;">روبیکا : <a style="color: rgb(0, 81, 255);" href="https://rubika.ir/modern_metals">https://rubika.ir/modern_metals</a></div>
-                <div style="font-family: 'font2';  font-size: 16px;">اینستاگرام : <a style="color: rgb(0, 81, 255);" href="https://www.instagram.com/modern_metals1?igsh=MXR1cHM1c2N4YWg1Mw==">modern_metals1@</a></div>
-            </div>
-            <div style="display: flex; flex-direction: row; margin: 25px 0 0;">
-                <a class="store-ertebat-a" style="border-radius: 0 15px 15px 0; width: 150px; height: 40px; font-size: 12px; margin: 2px;" href="tel:09051795672">تماس با پشتیبانی</a>
-                <a class="store-ertebat-a" style="border-radius: 15px 0 0 15px; width: 150px; height: 40px; font-size: 12px; margin: 2px;" href="sms:09051795672">ارسال پیامک به پشتیبانی</a>
-            </div>
+    <div class="examples">
+        <h1 style="margin: 0; font-family: 'font2'; font-size: 22px;">نمونه کار ها</h1>
+        <div class="examples-div">
+            <img src="https://raw.githubusercontent.com/m0h4-0/store/main/static/imgs/nemoone1.jpg" class="examples-div-img">
+            <img src="https://raw.githubusercontent.com/m0h4-0/store/main/static/imgs/nemoone2.jpeg" class="examples-div-img">
         </div>
+        <div class="examples-div">
+            <img src="https://raw.githubusercontent.com/m0h4-0/store/main/static/imgs/nemoone3.jpeg" class="examples-div-img">
+            <img src="https://raw.githubusercontent.com/m0h4-0/store/main/static/imgs/nemoone4.jpeg" class="examples-div-img">                                                                               
+        </div>
+        <div class="examples-div">
+            <img src="https://raw.githubusercontent.com/m0h4-0/store/main/static/imgs/nemoone5.jpeg" class="examples-div-img">
+            <img src="https://raw.githubusercontent.com/m0h4-0/store/main/static/imgs/nemoone6.jpeg" class="examples-div-img">                                                                               
+        </div>
+        <div class="examples-div">
+            <img src="https://raw.githubusercontent.com/m0h4-0/store/main/static/imgs/nemoone7.jpeg" class="examples-div-img">
+            <img src="https://raw.githubusercontent.com/m0h4-0/store/main/static/imgs/nemoone8.jpeg" class="examples-div-img">                                                                               
+        </div>
+        <div class="examples-div">
+            <a href="not_found_page.html" style="direction: rtl;text-decoration: none; width: 100%; padding: 1px 0;">
+                <span style="direction: rtl; font-family: font2; margin: 0 18px; color: #0043ff;">بیشتر ...</span>
+            </a>
+        </div>
+    </div>
+    <div style="width: 100%; display: flex; justify-content: center; margin-top: 10px;">
+        <a style="background: #db0000; color: white; font-family: 'font2'; font-size: 13px; padding: 10px 16px;" href="store.html">ورود به فروشگاه</a>
     </div>
     <footer>
         <div class="fast-access">
@@ -111,6 +124,17 @@
             if (event.target === event.currentTarget) {
                 document.getElementById("menu").style.display = "none"
             }
+        });
+
+        document.querySelectorAll(".questions-div-div").forEach((question) => {
+            question.addEventListener('click', () => {
+                const questionDivDiv = question.closest('.questions-div-div')
+                const questionDivDivA = questionDivDiv.querySelector('.questions-div-div-a')
+                const questionsDivDivI = question.querySelector('.questions-div-div-i')
+                const isOpen = questionDivDivA.style.display === 'block';
+                questionDivDivA.style.display = isOpen ? 'none' : 'block';
+                questionsDivDivI.textContent = isOpen ? '+' : '-';
+            });
         });
     </script>
 </body>
